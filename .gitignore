@@ -1,0 +1,7 @@
+# file don't push to github
+/node_modules
+/vendor
+/.idea
+.idea/
+.env
+
