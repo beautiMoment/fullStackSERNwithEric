@@ -8,10 +8,15 @@
 
   .login-container {
     width: 400px;
-    height: 100%;
-    margin: 0 auto;
+    height: 450px;
     background-color: white;
     border-radius: 10px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
   .login-cotent {
@@ -26,6 +31,17 @@
 
     .login-input {
       margin: 7px 0;
+
+      .custom-input-password {
+        position: relative;
+
+        i {
+          position: absolute;
+          right: 5px;
+          top: 10px;
+          cursor: pointer;
+        }
+      }
     }
 
     .btn-login {
