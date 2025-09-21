@@ -9,6 +9,7 @@ import cors from "cors";
 require("dotenv").config();
 
 let app = express();
+// handle problem in browser not found status login
 app.use(cors({ credentials: true, origin: true }));
 
 // config app
