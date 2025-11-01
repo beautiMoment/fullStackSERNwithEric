@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { FormattedMessage } from "react-intl";
+// import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./TableManageUser.scss";
-import UserRedux from "./UserRedux";
+// import UserRedux from "./UserRedux";
 import * as actions from "../../../store/actions";
 
 class TableManageUser extends Component {
@@ -29,9 +29,14 @@ class TableManageUser extends Component {
     this.props.deleteAUserRedux(user.id);
   };
 
+  handleEditUser = (user) => {
+    // console.log(user);
+    this.props.handleEditUserFromParentKey(user);
+  };
+
   render() {
-    console.log("hoidanit check all user:", this.props.listUsers);
-    console.log("hoidanit check state:", this.state.usersRedux);
+    // console.log("hoidanit check all user:", this.props.listUsers);
+    // console.log("hoidanit check state:", this.state.usersRedux);
     let arrUsers = this.state.usersRedux;
     return (
       <table id="TableManageUser">
@@ -53,7 +58,10 @@ class TableManageUser extends Component {
                   <td>{item.lastName}</td>
                   <td>{item.address}</td>
                   <td>
-                    <button className="btn-edit">
+                    <button
+                      className="btn-edit"
+                      onClick={() => this.handleEditUser(item)}
+                    >
                       <i className="fas fa-pencil-alt"></i>
                     </button>
                     <button

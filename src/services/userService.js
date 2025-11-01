@@ -18,6 +18,7 @@ const deleteUserService = (userId) => {
 };
 
 const editUserService = (inputData) => {
+  // console.log("Clicked update");
   return axios.put("/api/edit-user", inputData);
 };
 
